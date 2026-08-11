@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maneesh Kumar Yadav — Node.js Backend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo"><span class="accent">&gt;</span> maneesh.dev</span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="resume.html" class="nav-btn" target="_blank">Resume</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <div class="terminal-card">
+        <div class="terminal-bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title">bash — maneesh@portfolio</span>
+        </div>
+        <div class="terminal-body">
+          <p><span class="prompt">$</span> <span class="cmd">whoami</span></p>
+          <p class="output"><span class="accent">Maneesh Kumar Yadav</span></p>
+          <p class="mt8"><span class="prompt">$</span> <span class="cmd">cat role.txt</span></p>
+          <p class="output">Node.js Backend Developer · <span class="accent2">3+ Years</span></p>
+          <p class="mt8"><span class="prompt">$</span> <span class="cmd">cat stack.txt</span></p>
+          <p class="output">Node.js · Express.js · AdonisJS · MySQL · REST APIs · JWT</p>
+          <p class="mt8"><span class="prompt">$</span> <span class="cmd">echo $LOCATION</span></p>
+          <p class="output">Jabalpur, MP, India 🇮🇳 · <span class="accent2">Open to Remote / Relocation</span></p>
+          <p class="mt8"><span class="prompt">$</span> <span class="cursor-blink">█</span></p>
+        </div>
+      </div>
+      <div class="hero-text">
+        <p class="hero-eyebrow">Hello, I'm</p>
+        <h1>Maneesh<br /><span class="name-accent">Kumar Yadav</span></h1>
+        <p class="hero-tagline">Building scalable backend systems, RESTful APIs &amp; enterprise solutions that ship to production.</p>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num">20+</span><span class="stat-label">APIs Built</span></div>
+          <div class="stat-div"></div>
+          <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Projects</span></div>
+          <div class="stat-div"></div>
+          <div class="stat"><span class="stat-num">5K+</span><span class="stat-label">Users Served</span></div>
+          <div class="stat-div"></div>
+          <div class="stat"><span class="stat-num">40%</span><span class="stat-label">Query Speedup</span></div>
+        </div>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary">View Projects</a>
+          <a href="#contact" class="btn-secondary">Hire Me</a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">scroll down <span class="arrow-down">↓</span></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label">// about_me</div>
+      <h2 class="section-title">Who I Am</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm a results-driven <strong>Node.js Backend Developer</strong> with 3+ years of professional experience designing and building scalable RESTful APIs, microservice modules, and enterprise backend systems.</p>
+          <p>Proficient in <strong>Node.js, Express.js</strong>, and <strong>AdonisJS</strong> (MVC, Lucid ORM, validations), with hands-on experience in JWT and Active Directory authentication, role-based access control (RBAC), and MySQL query optimisation.</p>
+          <p>I've delivered production-grade backends for domains including <strong>property management, budgeting tools, email automation</strong>, and <strong>social platforms</strong> with 5,000+ registered users. Strong track record integrating Firebase FCM, WhatsApp API, Power BI, and third-party notification services.</p>
+          <p>Seeking a <strong>mid-level to senior Backend Developer</strong> role in India or remote-international positions (Japan / Australia / Singapore).</p>
+          <div class="about-links">
+            <a href="https://github.com/Maneeshy440" target="_blank" class="icon-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a href="http://www.linkedin.com/in/maneesh-yadav-1ba6b4235" target="_blank" class="icon-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <a href="mailto:maneeshy440@gmail.com" class="icon-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Email
+            </a>
+          </div>
+        </div>
+        <div class="about-card-col">
+          <div class="info-card">
+            <div class="info-row"><span class="info-label">📍 Location</span><span>Jabalpur, MP, India</span></div>
+            <div class="info-row"><span class="info-label">💼 Experience</span><span>3+ Years</span></div>
+            <div class="info-row"><span class="info-label">🎓 Education</span><span>B.Tech (ECE) — RGPV</span></div>
+            <div class="info-row"><span class="info-label">🌐 Languages</span><span>Hindi, English</span></div>
+            <div class="info-row"><span class="info-label">✈️ Open To</span><span>Remote · Relocation</span></div>
+            <div class="info-row"><span class="info-label">⚡ Availability</span><span class="badge-green">Immediate</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-label">// tech_stack</div>
+      <h2 class="section-title">Skills & Technologies</h2>
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <div class="skill-icon">⚙️</div>
+          <h3>Backend</h3>
+          <div class="tags">
+            <span class="tag core">Node.js</span>
+            <span class="tag core">Express.js</span>
+            <span class="tag core">AdonisJS</span>
+            <span class="tag">REST API Design</span>
+            <span class="tag">MVC Architecture</span>
+            <span class="tag">Middleware</span>
+            <span class="tag">RBAC</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">💾</div>
+          <h3>Databases</h3>
+          <div class="tags">
+            <span class="tag core">MySQL</span>
+            <span class="tag">Stored Procedures</span>
+            <span class="tag">Query Optimisation</span>
+            <span class="tag">Indexing</span>
+            <span class="tag">Firebase Realtime DB</span>
+            <span class="tag familiar">MongoDB</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🔐</div>
+          <h3>Auth & Security</h3>
+          <div class="tags">
+            <span class="tag core">JWT</span>
+            <span class="tag core">bcrypt</span>
+            <span class="tag">Active Directory</span>
+            <span class="tag">Session Management</span>
+            <span class="tag">RBAC</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🔗</div>
+          <h3>Integrations</h3>
+          <div class="tags">
+            <span class="tag core">Firebase FCM</span>
+            <span class="tag">WhatsApp Business API</span>
+            <span class="tag">Nodemailer</span>
+            <span class="tag">Power BI API</span>
+            <span class="tag">Bulk Email Systems</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🛠️</div>
+          <h3>Languages</h3>
+          <div class="tags">
+            <span class="tag core">JavaScript (ES6+)</span>
+            <span class="tag">SQL</span>
+            <span class="tag familiar">TypeScript</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🧰</div>
+          <h3>Tools & Platforms</h3>
+          <div class="tags">
+            <span class="tag core">Git &amp; GitHub</span>
+            <span class="tag core">Postman</span>
+            <span class="tag core">Swagger</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">Render</span>
+            <span class="tag">IIS Server</span>
+            <span class="tag familiar">AWS S3</span>
+          </div>
+        </div>
+
+      </div>
+      <div class="tag-legend">
+        <span class="tag core">Core Skill</span>
+        <span class="tag familiar">Familiar / Learning</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-label">// work_history</div>
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="job-title">Node.js Backend Developer</h3>
+                <p class="company">Cylsys Software Solution Pvt. Ltd. · Mumbai</p>
+              </div>
+              <span class="date-badge">Jul 2022 – Nov 2025</span>
+            </div>
+            <ul class="job-bullets">
+              <li>Architected and delivered <strong>20+ production RESTful APIs</strong> using Node.js, Express.js, and AdonisJS across 5+ commercial projects</li>
+              <li>Engineered <strong>JWT and Active Directory authentication</strong> systems securing access for 500+ enterprise users across multi-tenant applications</li>
+              <li>Designed and implemented <strong>RBAC middleware</strong> enforcing granular permission policies for 3-tier user hierarchies</li>
+              <li>Optimised MySQL queries using indexing, stored procedures, and profiling — reducing report generation time by <strong>~40%</strong></li>
+              <li>Integrated Firebase FCM, WhatsApp Business API, and Nodemailer for real-time push, transactional alerts, and bulk email delivery</li>
+              <li>Built <strong>Mailblitz</strong> — a bulk email platform processing <strong>10,000+ emails per campaign</strong> with analytics and delivery tracking</li>
+              <li>Integrated <strong>Power BI Embedded API</strong> into enterprise budgeting tool for real-time financial dashboards</li>
+              <li>Authored comprehensive API documentation using <strong>Swagger and Postman</strong>, reducing frontend integration time by 30%</li>
+            </ul>
+            <div class="tech-used">
+              <span>Node.js</span><span>Express.js</span><span>AdonisJS</span><span>MySQL</span><span>JWT</span><span>Firebase</span><span>Swagger</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-label">// featured_projects</div>
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card featured">
+          <div class="project-header">
+            <div class="project-icon">🌍</div>
+            <div class="project-links">
+              <a href="https://play.google.com/store/apps/details?id=com.peacebook" target="_blank" class="proj-link" title="Live App">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3>Global Justice – I Am Peacekeeper</h3>
+          <p class="proj-desc">Social-impact mobile platform with <strong>5,000+ registered peacekeepers across 10+ countries</strong>. Full backend including social engagement, moderation, real-time notifications, and multi-role access.</p>
+          <ul class="proj-highlights">
+            <li>30+ RESTful APIs covering user registration, profiles, and content moderation</li>
+            <li>Social modules: posts, nested comments, reactions, group management, activity feeds</li>
+            <li>Real-time push via Firebase FCM for post activity, chat, and alerts</li>
+            <li>AdonisJS MVC + Lucid ORM with custom validators</li>
+          </ul>
+          <div class="proj-tags">
+            <span>AdonisJS</span><span>MySQL</span><span>Firebase FCM</span><span>REST API</span><span>RBAC</span>
+          </div>
+          <div class="proj-meta">Nov 2024 – May 2025</div>
+        </div>
+
+        <div class="project-card featured">
+          <div class="project-header">
+            <div class="project-icon">📊</div>
+            <div class="project-links">
+              <a href="https://budget.ambit.co/" target="_blank" class="proj-link" title="Live App">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3>Ambit Budgeting Tool</h3>
+          <p class="proj-desc">Enterprise multi-department budgeting platform with approval workflows for <strong>200+ corporate users</strong>, Power BI dashboards, and AD SSO integration.</p>
+          <ul class="proj-highlights">
+            <li>Active Directory (AD) SSO eliminating password management overhead</li>
+            <li>Power BI Embedded API for real-time financial dashboards</li>
+            <li>MySQL schema with 15+ relational tables, audit logs &amp; approval chains</li>
+          </ul>
+          <div class="proj-tags">
+            <span>Node.js</span><span>Express.js</span><span>Active Directory</span><span>Power BI</span><span>MySQL</span>
+          </div>
+          <div class="proj-meta">Dec 2024 – Apr 2025</div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">🏠</div>
+          </div>
+          <h3>KODIE – Property Management</h3>
+          <p class="proj-desc">Multi-role property management app for landlords, tenants &amp; contractors on iOS and Android. Full backend with JWT auth, Firebase chat, and real-time notifications.</p>
+          <ul class="proj-highlights">
+            <li>25+ REST APIs for listings, maintenance, contractor assignment</li>
+            <li>JWT 3-tier role authentication with middleware gating</li>
+            <li>Firebase Realtime Database for in-app chat</li>
+          </ul>
+          <div class="proj-tags">
+            <span>Node.js</span><span>Express.js</span><span>Firebase</span><span>MySQL</span><span>JWT</span>
+          </div>
+          <div class="proj-meta">Nov 2023 – Oct 2024</div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">📧</div>
+            <div class="project-links">
+              <a href="https://mailblitz.cylsys.com/login" target="_blank" class="proj-link" title="Live App">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3>Mailblitz – Bulk Email Platform</h3>
+          <p class="proj-desc">SaaS bulk email platform capable of dispatching <strong>10,000+ targeted emails per campaign</strong> with delivery tracking, analytics, and GDPR-compliant opt-out.</p>
+          <ul class="proj-highlights">
+            <li>Template CRUD, CSV recipient upload, scheduled dispatch</li>
+            <li>Open/click rate analytics dashboard</li>
+            <li>Bounce tracking, unsubscribe management, GDPR opt-out</li>
+          </ul>
+          <div class="proj-tags">
+            <span>Node.js</span><span>Express.js</span><span>MySQL</span><span>Nodemailer</span>
+          </div>
+          <div class="proj-meta">Nov 2022 – Aug 2023</div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">👥</div>
+          </div>
+          <h3>HRMS Info – HR Management System</h3>
+          <p class="proj-desc">Backend APIs for a full HRMS covering company profiles, employee databases, departmental hierarchies, and employment history with multi-branch support.</p>
+          <ul class="proj-highlights">
+            <li>Role-based self-service &amp; admin modules</li>
+            <li>Multi-branch company structure support</li>
+            <li>AdonisJS MVC conventions and clean architecture</li>
+          </ul>
+          <div class="proj-tags">
+            <span>Node.js</span><span>AdonisJS</span><span>MySQL</span>
+          </div>
+          <div class="proj-meta">Apr 2023 – Oct 2023</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label">// get_in_touch</div>
+      <h2 class="section-title">Let's Connect</h2>
+      <p class="contact-sub">I'm actively looking for <strong>Node.js Backend / Full Stack roles</strong> in India or remote. Drop me a message!</p>
+      <div class="contact-grid">
+        <a href="mailto:maneeshy440@gmail.com" class="contact-card">
+          <div class="c-icon">✉️</div>
+          <div class="c-label">Email</div>
+          <div class="c-value">maneeshy440@gmail.com</div>
+        </a>
+        <a href="tel:+919755371124" class="contact-card">
+          <div class="c-icon">📞</div>
+          <div class="c-label">Phone</div>
+          <div class="c-value">+91-97553 71124</div>
+        </a>
+        <a href="http://www.linkedin.com/in/maneesh-yadav-1ba6b4235" target="_blank" class="contact-card">
+          <div class="c-icon">💼</div>
+          <div class="c-label">LinkedIn</div>
+          <div class="c-value">maneesh-yadav-1ba6b4235</div>
+        </a>
+        <a href="https://github.com/Maneeshy440" target="_blank" class="contact-card">
+          <div class="c-icon">🐙</div>
+          <div class="c-label">GitHub</div>
+          <div class="c-value">Maneeshy440</div>
+        </a>
+      </div>
+      <div class="availability-banner">
+        <span class="pulse-dot"></span>
+        <strong>Available for immediate joining</strong> · Open to Remote, Hybrid, and Onsite roles in India &amp; International
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>Designed &amp; built by <span class="accent">Maneesh Kumar Yadav</span> · Node.js Backend Developer</p>
+      <p class="footer-sub">© 2026 · Jabalpur, India</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

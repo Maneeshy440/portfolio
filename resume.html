@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maneesh Kumar Yadav — Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --green: #39d98a;
+      --blue: #5eaeff;
+      --bg: #0d0f14;
+      --bg2: #12151c;
+      --bg3: #181c26;
+      --border: #1e2433;
+      --text: #c9d1e0;
+      --text-dim: #6b7694;
+      --text-bright: #eef0f7;
+      --mono: 'JetBrains Mono', monospace;
+      --sans: 'Inter', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.6;
+    }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { color: var(--green); }
+
+    .topbar {
+      background: rgba(13,15,20,0.95);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 32px;
+      display: flex; justify-content: space-between; align-items: center;
+      position: sticky; top: 0; z-index: 10;
+    }
+    .topbar a.back {
+      font-family: var(--mono); font-size: 0.8rem;
+      color: var(--text-dim); display: flex; align-items: center; gap: 6px;
+    }
+    .topbar a.back:hover { color: var(--green); }
+    .print-btn {
+      background: var(--green); color: #0d0f14;
+      border: none; padding: 8px 20px; border-radius: 6px;
+      font-weight: 600; font-size: 0.82rem; cursor: pointer;
+    }
+
+    .resume-wrap {
+      max-width: 860px; margin: 40px auto; padding: 0 24px 60px;
+    }
+
+    /* Header */
+    .r-header {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 10px; padding: 36px 40px; margin-bottom: 28px;
+      display: flex; gap: 32px; align-items: center;
+    }
+    .r-avatar {
+      width: 80px; height: 80px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--green), var(--blue));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem; font-weight: 700; color: #0d0f14;
+      flex-shrink: 0;
+    }
+    .r-name { font-size: 2rem; font-weight: 700; color: var(--text-bright); margin-bottom: 4px; }
+    .r-role { color: var(--green); font-family: var(--mono); font-size: 0.9rem; margin-bottom: 14px; }
+    .r-contacts {
+      display: flex; flex-wrap: wrap; gap: 16px;
+      font-size: 0.8rem; color: var(--text-dim);
+    }
+    .r-contacts span { display: flex; align-items: center; gap: 5px; }
+
+    /* Section */
+    .r-section { margin-bottom: 28px; }
+    .r-section-title {
+      font-family: var(--mono); font-size: 0.75rem;
+      color: var(--green); letter-spacing: 0.12em;
+      text-transform: uppercase; margin-bottom: 14px;
+      padding-bottom: 8px; border-bottom: 1px solid var(--border);
+    }
+
+    /* Summary */
+    .r-summary {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 8px; padding: 20px 24px;
+      font-size: 0.875rem; line-height: 1.8; color: var(--text);
+    }
+
+    /* Skills table */
+    .skills-table { width: 100%; border-collapse: collapse; }
+    .skills-table tr { border-bottom: 1px solid var(--border); }
+    .skills-table tr:last-child { border-bottom: none; }
+    .skills-table td { padding: 10px 16px; font-size: 0.82rem; vertical-align: top; }
+    .skills-table td:first-child {
+      color: var(--text-dim); font-weight: 600; width: 180px;
+      font-family: var(--mono); font-size: 0.75rem;
+      white-space: nowrap;
+    }
+    .skills-table td:last-child { color: var(--text); }
+    .skills-table { background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+
+    /* Experience */
+    .exp-item {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 8px; padding: 22px 24px; margin-bottom: 16px;
+    }
+    .exp-header { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+    .exp-title { font-size: 1rem; font-weight: 600; color: var(--text-bright); }
+    .exp-company { color: var(--green); font-size: 0.82rem; }
+    .exp-date { font-family: var(--mono); font-size: 0.74rem; color: var(--text-dim); }
+    .exp-list { padding-left: 18px; list-style: disc; }
+    .exp-list li { font-size: 0.82rem; color: var(--text); margin-bottom: 6px; line-height: 1.65; }
+    .exp-list li::marker { color: var(--green); }
+    .exp-list strong { color: var(--text-bright); }
+
+    /* Projects */
+    .proj-item {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 8px; padding: 20px 24px; margin-bottom: 14px;
+    }
+    .proj-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
+    .proj-name { font-size: 0.95rem; font-weight: 600; color: var(--text-bright); }
+    .proj-stack { font-family: var(--mono); font-size: 0.72rem; color: var(--blue); }
+    .proj-date { font-family: var(--mono); font-size: 0.72rem; color: var(--text-dim); white-space: nowrap; }
+    .proj-list { padding-left: 16px; list-style: disc; }
+    .proj-list li { font-size: 0.8rem; color: var(--text-dim); margin-bottom: 4px; line-height: 1.6; }
+    .proj-list li::marker { color: var(--blue); }
+
+    /* Education & certs */
+    .edu-item {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 8px; padding: 18px 24px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 8px;
+    }
+    .edu-deg { font-size: 0.9rem; font-weight: 600; color: var(--text-bright); }
+    .edu-inst { font-size: 0.8rem; color: var(--text-dim); margin-top: 3px; }
+    .edu-date { font-family: var(--mono); font-size: 0.74rem; color: var(--text-dim); }
+
+    /* Print */
+    @media print {
+      body { background: white; color: #1a1a2e; }
+      .topbar { display: none; }
+      .r-header, .exp-item, .proj-item, .edu-item, .r-summary, .skills-table {
+        background: white !important; border-color: #ddd !important;
+      }
+      .r-name, .exp-title, .proj-name { color: #1a1a2e !important; }
+      .r-role, .exp-company { color: #1a7a50 !important; }
+      .r-section-title { color: #1a7a50 !important; border-color: #ddd !important; }
+      .exp-list li, .proj-list li, .r-summary, .r-contacts span { color: #444 !important; }
+      .skills-table td:last-child { color: #444 !important; }
+      .resume-wrap { max-width: 100%; margin: 0; padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="back">← Back to Portfolio</a>
+    <button class="print-btn" onclick="window.print()">⬇ Download / Print</button>
+  </div>
+
+  <div class="resume-wrap">
+
+    <!-- Header -->
+    <div class="r-header">
+      <div class="r-avatar">MY</div>
+      <div>
+        <div class="r-name">Maneesh Kumar Yadav</div>
+        <div class="r-role">Node.js Backend Developer · 3+ Years Experience</div>
+        <div class="r-contacts">
+          <span>✉ maneeshy440@gmail.com</span>
+          <span>📞 +91-97553 71124</span>
+          <span>📍 Jabalpur, MP, India</span>
+          <span>🐙 <a href="https://github.com/Maneeshy440" target="_blank">github.com/Maneeshy440</a></span>
+          <span>💼 <a href="http://www.linkedin.com/in/maneesh-yadav-1ba6b4235" target="_blank">LinkedIn</a></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Summary -->
+    <div class="r-section">
+      <div class="r-section-title">// professional_summary</div>
+      <div class="r-summary">
+        Results-driven Node.js Backend Developer with 3+ years of professional experience designing and building scalable RESTful APIs, microservice modules, and enterprise backend systems. Proficient in <strong>Node.js, Express.js</strong>, and <strong>AdonisJS</strong> (MVC, Lucid ORM, validations), with hands-on experience in JWT and Active Directory authentication, role-based access control (RBAC), and MySQL query optimisation. Delivered production-grade backend for domains including property management, budgeting tools, email automation, and social platforms with <strong>5,000+ registered users</strong>. Strong track record integrating Firebase FCM, WhatsApp API, Power BI, and third-party notification services.
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="r-section">
+      <div class="r-section-title">// technical_skills</div>
+      <table class="skills-table">
+        <tr><td>Languages</td><td>JavaScript (ES6+), TypeScript, SQL</td></tr>
+        <tr><td>Backend</td><td>Node.js, Express.js, AdonisJS, REST API Design, MVC Architecture, Middleware, RBAC</td></tr>
+        <tr><td>Auth & Security</td><td>JWT, Active Directory (AD), bcrypt, Role-Based Access Control, Session Management</td></tr>
+        <tr><td>Databases</td><td>MySQL (Stored Procedures, Query Optimisation, Indexing), Firebase Realtime Database</td></tr>
+        <tr><td>Integrations</td><td>Firebase FCM, WhatsApp API, Nodemailer, Power BI Embedded, Bulk Email Systems</td></tr>
+        <tr><td>Tools & Platforms</td><td>Git, GitHub, Postman, Swagger, VS Code, Render, IIS Server</td></tr>
+        <tr><td>Familiar With</td><td>MongoDB, AWS S3 (basics), TypeScript</td></tr>
+      </table>
+    </div>
+
+    <!-- Experience -->
+    <div class="r-section">
+      <div class="r-section-title">// professional_experience</div>
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-title">Node.js Backend Developer</div>
+            <div class="exp-company">Cylsys Software Solution Pvt. Ltd. · Mumbai</div>
+          </div>
+          <div class="exp-date">Jul 2022 – Nov 2025 (3+ Years)</div>
+        </div>
+        <ul class="exp-list">
+          <li>Architected and delivered <strong>20+ production RESTful APIs</strong> using Node.js, Express.js, and AdonisJS, serving web and mobile clients across 5+ commercial projects</li>
+          <li>Engineered JWT and Active Directory (AD) authentication systems with bcrypt, securing access for <strong>500+ enterprise users</strong> across multi-tenant applications</li>
+          <li>Designed RBAC middleware enforcing granular permission policies for 3-tier user hierarchies (admin, manager, end user)</li>
+          <li>Optimised MySQL queries using indexing, stored procedures, and profiling — reducing critical report generation time by <strong>~40%</strong></li>
+          <li>Integrated Firebase FCM, WhatsApp Business API, and Nodemailer for real-time push, transactional alerts, and bulk email delivery</li>
+          <li>Built Mailblitz bulk email platform processing <strong>10,000+ emails per campaign</strong> with template management, analytics, and delivery tracking</li>
+          <li>Integrated Power BI Embedded API into Ambit budgeting tool for real-time financial dashboards</li>
+          <li>Authored comprehensive Swagger and Postman documentation, reducing frontend integration time by <strong>30%</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="r-section">
+      <div class="r-section-title">// key_projects</div>
+
+      <div class="proj-item">
+        <div class="proj-head">
+          <div>
+            <div class="proj-name">Global Justice – I Am Peacekeeper <a href="https://play.google.com/store/apps/details?id=com.peacebook" target="_blank" style="font-size:0.72rem;color:var(--blue)">[Play Store ↗]</a></div>
+            <div class="proj-stack">AdonisJS · MySQL · Firebase FCM · REST API</div>
+          </div>
+          <div class="proj-date">Nov 2024 – May 2025</div>
+        </div>
+        <ul class="proj-list">
+          <li>Complete backend for a social-impact mobile platform with 5,000+ peacekeepers across 10+ countries</li>
+          <li>30+ RESTful APIs: registration, profiles, RBAC (admin/peacekeeper/moderator), content moderation</li>
+          <li>Social modules: posts, nested comments, reactions, group management, connection requests, activity feeds</li>
+          <li>Firebase FCM for real-time push notifications across post activity, chat, and moderation alerts</li>
+        </ul>
+      </div>
+
+      <div class="proj-item">
+        <div class="proj-head">
+          <div>
+            <div class="proj-name">Ambit Budgeting Tool <a href="https://budget.ambit.co/" target="_blank" style="font-size:0.72rem;color:var(--blue)">[Live ↗]</a></div>
+            <div class="proj-stack">Node.js · Express.js · Active Directory · Power BI · MySQL</div>
+          </div>
+          <div class="proj-date">Dec 2024 – Apr 2025</div>
+        </div>
+        <ul class="proj-list">
+          <li>Enterprise budgeting platform with approval workflows for 200+ corporate users</li>
+          <li>Active Directory SSO authentication; Power BI Embedded for real-time financial dashboards</li>
+          <li>MySQL schema with 15+ relational tables, audit logs, and version-controlled approval chains</li>
+        </ul>
+      </div>
+
+      <div class="proj-item">
+        <div class="proj-head">
+          <div>
+            <div class="proj-name">KODIE – Property Management Platform</div>
+            <div class="proj-stack">Node.js · Express.js · Firebase · MySQL · JWT</div>
+          </div>
+          <div class="proj-date">Nov 2023 – Oct 2024</div>
+        </div>
+        <ul class="proj-list">
+          <li>Full backend for multi-role property management app on iOS and Android</li>
+          <li>25+ REST APIs for listings, maintenance lifecycle, contractor assignment, document uploads</li>
+          <li>JWT 3-tier auth (landlord, tenant, contractor); Firebase Realtime DB for in-app chat</li>
+        </ul>
+      </div>
+
+      <div class="proj-item">
+        <div class="proj-head">
+          <div>
+            <div class="proj-name">Mailblitz – Bulk Email Platform <a href="https://mailblitz.cylsys.com/login" target="_blank" style="font-size:0.72rem;color:var(--blue)">[Live ↗]</a></div>
+            <div class="proj-stack">Node.js · Express.js · MySQL · Nodemailer</div>
+          </div>
+          <div class="proj-date">Nov 2022 – Aug 2023</div>
+        </div>
+        <ul class="proj-list">
+          <li>SaaS bulk email platform dispatching 10,000+ targeted emails per campaign</li>
+          <li>Campaign APIs: template CRUD, CSV recipient upload, scheduled dispatch, open/click analytics</li>
+          <li>GDPR-compliant opt-out flow, bounce tracking, unsubscribe management</li>
+        </ul>
+      </div>
+
+      <div class="proj-item">
+        <div class="proj-head">
+          <div>
+            <div class="proj-name">HRMS Info – HR Management System</div>
+            <div class="proj-stack">Node.js · AdonisJS · MySQL</div>
+          </div>
+          <div class="proj-date">Apr 2023 – Oct 2023</div>
+        </div>
+        <ul class="proj-list">
+          <li>Backend APIs for HRMS: company profiles, employee database, departmental hierarchies, employment records</li>
+          <li>Role-based employee self-service and admin modules with multi-branch company structure support</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="r-section">
+      <div class="r-section-title">// education</div>
+      <div class="edu-item">
+        <div>
+          <div class="edu-deg">Bachelor of Technology (B.Tech) — Electronics & Communication Engineering</div>
+          <div class="edu-inst">Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV) · Bhopal, MP</div>
+        </div>
+        <div class="edu-date">Aug 2018 – Jun 2022</div>
+      </div>
+    </div>
+
+    <!-- Additional -->
+    <div class="r-section">
+      <div class="r-section-title">// additional_info</div>
+      <div class="r-summary">
+        <strong>Availability:</strong> Immediate / Open to notice period discussion &nbsp;·&nbsp;
+        <strong>Location:</strong> Jabalpur, MP — open to relocation within India &nbsp;·&nbsp;
+        <strong>Remote:</strong> Open to international remote roles (Japan, Australia, Singapore) &nbsp;·&nbsp;
+        <strong>Languages:</strong> Hindi (native), English (professional working proficiency)
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
