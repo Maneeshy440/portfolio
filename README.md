@@ -54,7 +54,7 @@ git push -u origin main
 - **About** — Bio, contact info, availability
 - **Skills** — Full tech stack
 - **Experience** — Cylsys Software Solution
-- **Projects** — 5 production projects with live links
+- **Projects** — 7 production projects with live links
 - **Contact** — Email, phone, LinkedIn, GitHub
 
 ## ✏️ Customization
